@@ -26,6 +26,30 @@ DNA_Codons = {
     "TAA": "_", "TAG": "_", "TGA": "_"
 }
 
+DNA_Codons_List = [
+    "A / ala",
+    "C / cys",
+    "D / asp",
+    "E / glu",
+    "F / phe",
+    "G / gly",
+    "H / his",
+    "I / ile",
+    "K / lys",
+    "L / leu",
+    "M / met",
+    "N / asn",
+    "P / pro",
+    "Q / gln",
+    "R / arg",
+    "S / ser",
+    "T / thr",
+    "V / val",
+    "W / trp",
+    "Y / tyr",
+    "_ / non"
+]
+
 RNA_Codons = {
     # 'M' - START, '_' - STOP
     "GCU": "A", "GCC": "A", "GCA": "A", "GCG": "A",

@@ -1,9 +1,12 @@
 from dna_toolkit import *
 from utilities import colored
 import random
+import time
+
+start_time = time.time()
 
 # Creates random DNA sequence for testing
-randDNAStr = "".join([random.choice(Nucleotides) for nuc in range(50)])
+randDNAStr = "".join([random.choice(Nucleotides) for nuc in range(10000)])
 
 DNAStr = validateSeq(randDNAStr)
 
@@ -23,4 +26,10 @@ print(f"[6] + GC Content in Subsection k = 5 of DNA: {gc_content_subsec(DNAStr, 
 
 print(f"[7] + Amino Acid Sequence from DNA: {' '.join(translate_seq(DNAStr))}\n")
 
-print(f"[8] + Codon frequency (L): {codon_usage(DNAStr, 'L')}\n")
+print(f"[8] + Codon Frequencies")
+for i in DNA_Codons_List:
+    print(f"      [{i}] = {codon_usage(DNAStr, i[:1])}")
+
+print(f"\n[9] Execution Time: {round(time.time()-start_time, 4)} seconds ")
+
+
